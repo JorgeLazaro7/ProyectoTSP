@@ -1,5 +1,4 @@
 import gaframework.*;
-import Codification.CodEntero;
 
 public class CodificationTest{
 
