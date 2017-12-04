@@ -15,10 +15,13 @@ public class Fitness implements FitnessFunction<Integer>{
 	}
 
 
+	// Se regresa la distancia para usar la funcion objetivo linear ranking sugerida en el libro 
 	public double evaluate(Phenotype<Integer> p){
-		double fitness = 0;
+		double fitness = distancia(p)
+		/*double fitness = 0;
 		double distance = distancia(p);
 		fitness = 1/distance;
+		*/
 		return fitness;
 	}
 
@@ -29,7 +32,7 @@ public class Fitness implements FitnessFunction<Integer>{
 		//las ciudades adyacentes en el fenotipo
 			distance += table.getDistanceBetween(p.getAllele(i), p.getAllele(i+1)); 
 		}
-		//falta sumar la distancia entre el la ciudad final y la inicial para cerrar el ciclo
+		//faltaba sumar la distancia entre el la ciudad final y la inicial para cerrar el ciclo
 		distance += table.getDistanceBetween(p.getAllele(p.size()-1), p.getAllele(0));
 		
 		return distance;
