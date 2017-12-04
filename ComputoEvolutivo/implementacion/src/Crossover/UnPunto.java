@@ -1,5 +1,3 @@
-
-package Crossover;
 import gaframework.*;
 import java.util.List;
 import java.util.LinkedList; 

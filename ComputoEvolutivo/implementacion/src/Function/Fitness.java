@@ -1,4 +1,3 @@
-package Function;
 import gaframework.*;
 import org.moeaframework.problem.tsplib.*;
 

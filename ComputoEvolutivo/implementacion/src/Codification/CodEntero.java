@@ -1,4 +1,3 @@
-package Codification;
 import gaframework.*;
 import java.util.Random;
 
