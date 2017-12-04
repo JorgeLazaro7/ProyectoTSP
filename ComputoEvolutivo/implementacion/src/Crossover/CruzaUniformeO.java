@@ -42,18 +42,14 @@ public class CruzaUniformeO<G> implements CrossoverOp<G>{
 
             int size = padre1.size();
 
-
-            /////////////////////
             //Se crea una mascara de tamano size de booleanos true y false son equiprobables
-            boolean[] mascara = {true, false, false, true, true, false};
-            /*boolean[] mascara = new boolean[size];
+            boolean[] mascara = new boolean[size];
             for (int i=0; i<size; i++){
                 mascara[i] = (rdn.nextDouble() < 0.5) ? false : true;
-            }*/
+            }
 
             //Se genera una cadena genética vacía
             LinkedList<G> f1 = new LinkedList<>();
-            //int faltan = 0; 
             LinkedList<G> f2 = new LinkedList<>();
 
             // Hijos
@@ -68,7 +64,6 @@ public class CruzaUniformeO<G> implements CrossoverOp<G>{
                 }else{
                     f1.add(padre1.getGene(i));
                     f2.add(padre2.getGene(i));
-                    //faltan++;
                 }
             }
 
