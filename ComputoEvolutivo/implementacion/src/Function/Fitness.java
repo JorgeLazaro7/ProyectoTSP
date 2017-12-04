@@ -14,13 +14,11 @@ public class Fitness implements FitnessFunction<Integer>{
 	}
 
 
-	// Se regresa la distancia para usar la funcion objetivo linear ranking sugerida en el libro 
+	
 	public double evaluate(Phenotype<Integer> p){
-		double fitness = distancia(p)
-		/*double fitness = 0;
+		double fitness = 0;
 		double distance = distancia(p);
 		fitness = 1/distance;
-		*/
 		return fitness;
 	}
 
