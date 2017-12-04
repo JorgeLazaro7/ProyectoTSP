@@ -31,7 +31,9 @@ public class UnPunto<G> implements CrossoverOp<G>{
         Random rdn = new Random(System.currentTimeMillis());
 
         double a = rdn.nextDouble(); 
-                    // Experimento de Bernoulli si el número alaetorio obtenido está entre 0 y la probabilidad de cruza, esta se hace
+                    // Experimento de Bernoulli si el número alaetorio 
+                    // obtenido está entre 0 y la probabilidad de cruza, 
+                    // esta se hace.
         if(a <= probCruza){ ////Se hace la cruza
 
             int size = padre1.size();
@@ -58,6 +60,5 @@ public class UnPunto<G> implements CrossoverOp<G>{
         } else {
             return padres;    
         }
-
     }
 }

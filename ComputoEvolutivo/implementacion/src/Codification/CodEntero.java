@@ -8,6 +8,7 @@ import java.util.Random;
  */
 
 public class CodEntero implements Codification<Integer,Integer>{
+	
 	private int dim; //dimension de la instancia (número de ciudades)
 
 	public CodEntero(int i){

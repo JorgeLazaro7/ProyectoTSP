@@ -1,4 +1,14 @@
-<project name="Framework de Algoritmos Genéticos" default="build">
+<project name="Framework de Algoritmos Genéticos" default="jar">
+
+  <target name = "jar" depends="build">
+    <jar jarfile="ProyectoTSP.jar">
+      <zipfileset dir="build" prefix=""/>
+      <zipgroupfileset dir="lib" includes="*.jar" excludes=""/>
+      <manifest>
+        <attribute name="Main-class" value="CodificationTest"/>
+      </manifest>
+    </jar>
+  </target>
 
   <target name="build">
     <mkdir dir="build"/>
@@ -14,6 +24,7 @@
     <delete dir="build"/>
     <delete dir="dist"/>
     <delete dir="doc"/>
+    <delete file="ProyectoTSP.jar"/>
   </target>
   
   <target name="dist" depends="build">
@@ -21,6 +32,15 @@
     <jar destfile="dist/FrameworkAG.jar:lib/TSPLIB4J-0.2.jar"
    basedir="build"
    />
+  </target>
+
+  <target name="run" depends="build">
+    <java classname="Main" fork="true">
+    <arg value="${file}"/>
+      <classpath>
+        <pathelement path="lib/FrameworkAG.jar:lib/TSPLIB4J-0.2.jar:build"/>
+      </classpath>
+    </java>
   </target>
   
 </project>
