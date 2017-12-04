@@ -31,7 +31,7 @@ public class Mutacion implements MutationOp<Integer>{
 		//false es elegido con probabilidad 1-probMut
         boolean[] mascara = new boolean[size];
         int aMutar = 0;
-        for (int i=0; i<size; i++){
+        for (int i=1; i<size; i++){
         	if (r.nextDouble() <= probMut){
         		mascara[i] = true;
         		aMutar++;

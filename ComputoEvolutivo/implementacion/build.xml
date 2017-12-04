@@ -5,7 +5,7 @@
       <zipfileset dir="build" prefix=""/>
       <zipgroupfileset dir="lib" includes="*.jar" excludes=""/>
       <manifest>
-        <attribute name="Main-class" value="CodificationTest"/>
+        <attribute name="Main-class" value="TSPSolucion"/>
       </manifest>
     </jar>
   </target>
